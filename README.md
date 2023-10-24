@@ -36,3 +36,15 @@ Added JPA annotations for entity definition and primary key. Also generated gett
 - [x] Annotated the class with `@Service`.
 - [x] Implemented dependency injection for `HighScoreRepository` within `HighScoreServiceImpl`.
 
+### Step 6: Implementing RESTful Endpoints
+
+- [x] Implemented RESTful endpoints for CRUD operations in `HighScoreController`.
+- [x] Used `@GetMapping`, `@PostMapping`, `@PutMapping`, and `@DeleteMapping` annotations.
+- [x] Tested endpoints with Postman.
+
+### Step 7: Implementing the Service Layer
+
+- [x] Implemented the `HighScoreService` interface in the `HighScoreServiceImpl` class.
+- [x] Methods of `HighScoreService` are implemented by delegating the tasks to `HighScoreRepository`.
+
+

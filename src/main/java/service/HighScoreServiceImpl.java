@@ -1,13 +1,16 @@
 package service;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+
 import model.HighScore;
 import repository.HighScoreRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class HighScoreServiceImpl implements HighScoreService {
+
     @Autowired
     private HighScoreRepository highScoreRepository;
 
@@ -18,7 +21,8 @@ public class HighScoreServiceImpl implements HighScoreService {
 
     @Override
     public HighScore getHighScoreById(Long id) {
-        return highScoreRepository.findById(id).orElse(null);
+        Optional<HighScore> highScore = highScoreRepository.findById(id);
+        return highScore.orElse(null);
     }
 
     @Override
