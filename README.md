@@ -19,3 +19,31 @@ Added JPA annotations for entity definition and primary key. Also generated gett
 - [x] Created a new package named `repository` under `com.csm.highscore.gamehighscore`.
 - [x] Created a new Java interface named `HighScoreRepository`.
 - [x] Extended `JpaRepository` to enable CRUD operations for `HighScore` entities.
+
+### Step 4: Creating the Controller Layer
+
+- [x] Created a new package named `controller` under `com.csm.highscore.gamehighscore`.
+- [x] Created a new Java class named `HighScoreController` within the `controller` package.
+- [x] Annotated the class with `@RestController` and `@RequestMapping`.
+- [x] Implemented dependency injection for `HighScoreRepository`.
+
+#### Code Sample for HighScoreController
+```java
+import com.csm.highscore.gamehighscore.repository.HighScoreRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RestController
+@RequestMapping("/api/highscores")
+public class HighScoreController {
+
+    private final HighScoreRepository highScoreRepository;
+
+    @Autowired
+    public HighScoreController(HighScoreRepository highScoreRepository) {
+        this.highScoreRepository = highScoreRepository;
+    }
+
+    // TODO: Implement endpoints
+}
