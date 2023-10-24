@@ -13,3 +13,9 @@ Created a `HighScore` entity in the `model` package. It has the following fields
 - `score`: Stores the high score.
 
 Added JPA annotations for entity definition and primary key. Also generated getters and setters for these fields.
+
+
+### Step 3: Creating the Repository Layer
+- [x] Created a new package named `repository` under `com.csm.highscore.gamehighscore`.
+- [x] Created a new Java interface named `HighScoreRepository`.
+- [x] Extended `JpaRepository` to enable CRUD operations for `HighScore` entities.
