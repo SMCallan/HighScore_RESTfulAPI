@@ -27,23 +27,12 @@ Added JPA annotations for entity definition and primary key. Also generated gett
 - [x] Annotated the class with `@RestController` and `@RequestMapping`.
 - [x] Implemented dependency injection for `HighScoreRepository`.
 
-#### Code Sample for HighScoreController
-```java
-import com.csm.highscore.gamehighscore.repository.HighScoreRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestMapping;
+### Step 5: Implementing the Service Layer
 
-@RestController
-@RequestMapping("/api/highscores")
-public class HighScoreController {
+- [x] Created a new package named `service` under `com.csm.highscore.gamehighscore`.
+- [x] Defined a new Java interface named `HighScoreService` within the `service` package.
+- [x] Created a new Java class named `HighScoreServiceImpl` within the `service` package.
+- [x] Implemented the `HighScoreService` interface in `HighScoreServiceImpl`.
+- [x] Annotated the class with `@Service`.
+- [x] Implemented dependency injection for `HighScoreRepository` within `HighScoreServiceImpl`.
 
-    private final HighScoreRepository highScoreRepository;
-
-    @Autowired
-    public HighScoreController(HighScoreRepository highScoreRepository) {
-        this.highScoreRepository = highScoreRepository;
-    }
-
-    // TODO: Implement endpoints
-}
