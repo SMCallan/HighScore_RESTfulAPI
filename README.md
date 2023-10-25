@@ -193,4 +193,47 @@ In Spring Data JPA, the repository abstraction comes with a variety of pre-built
 
 This pattern can be instrumental in achieving clean separation and organization of code in your Spring Boot project, especially in handling data access in a clean, testable, and maintainable manner.
 
+---
+
+Our reflection on Lombok annotations, Inversion of Control (IoC), and Dependency Injection within the HighScore application is insightful and exhibits a solid understanding of these concepts and their implications. Here's some documentation that summarizes the considerations regarding the usage of these concepts in this project:
+
+---
+
+## Reflection Documentation: Lombok, IoC, and Dependency Injection in HighScore Application
+
+### **1. Lombok Annotations:**
+
+- **Current Usage:** Lombok annotations haven't been utilized in the provided code snippets for the HighScore application.
+- **Advantages:** 
+   - Reduces boilerplate code for model classes by auto-generating common methods (e.g., getters, setters, `toString`, `hashCode`, `equals`).
+   - Improves readability and maintainability.
+- **Considerations for Usage:** 
+   - Evaluate the balance between reducing boilerplate code and potential challenges in debugging or IDE support.
+   - Future scalability of the application and the addition of more model classes could make Lombok more beneficial.
+
+### **2. Inversion of Control (IoC):**
+
+- **Current Usage:** The HighScore application, being built on Spring Boot, inherently adopts IoC principles. Annotations like `@Service` and `@SpringBootTest` are indicative of IoC usage.
+- **Advantages:** 
+   - Decouples components, enhancing modularity and testability.
+   - The Spring IoC container manages the lifecycle and configurations of application components, simplifying dependency management.
+- **Considerations for Continuation:**
+   - As the application grows in complexity, IoC will continue to provide a structured and manageable approach to handling dependencies and configurations.
+
+### **3. Dependency Injection:**
+
+- **Current Usage:** Dependency Injection is actively employed in the HighScore application, as seen with `@Autowired` and `@MockBean` annotations.
+- **Advantages:** 
+   - Facilitates IoC, improving code modularity and testability.
+   - Simplifies the process of swapping or mocking components for testing purposes.
+- **Considerations for Continuation:**
+   - The growing scale of the application will likely necessitate continued and perhaps enhanced usage of Dependency Injection to maintain a clean, testable, and modular codebase.
+
+### **Summary:**
+
+The HighScore application effectively leverages IoC and Dependency Injection, aligning with best practices for modular, testable, and maintainable code. While Lombok annotations haven't been adopted, their potential for reducing boilerplate code makes them a worthwhile consideration for future development cycles.
+
+---
+
+This documentation encapsulates the current status, advantages, and future considerations regarding the adoption and continuation of Lombok annotations, IoC, and Dependency Injection in your project. It's structured to provide a clear understanding and aid in decision-making as the project evolves.
 
