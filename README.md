@@ -85,3 +85,75 @@ Having established a basic Spring Boot application with a structured architectur
 ---
 
 This streamlined roadmap outlines a pragmatic approach to establishing a robust testing phase, keeping it succinct yet comprehensive. It lays down the immediate steps to be taken for solidifying the testing framework, while also hinting at future considerations as the project advances. The focus is on ensuring that each layer of your Spring Boot application is thoroughly tested, providing a reliable foundation as you move forward with the development.
+
+---
+Formal documentation outline that captures the status of the testing phase for the HighScore REST API project:
+
+---
+
+### HighScore REST API Testing Documentation
+
+#### Project Overview
+
+- **Name**: HighScore REST API
+- **Purpose**: To manage game high scores through a RESTful API
+- **Tech Stack**: Spring Boot, JUnit, Mockito, Maven, H2 database
+
+---
+
+#### Testing Objectives
+
+1. To verify the functionality and reliability of all CRUD operations.
+2. To ensure that the API returns the correct status codes under different conditions.
+3. To assess performance under various loads.
+4. To validate security measures.
+
+---
+
+#### Testing Tools
+
+- **JUnit**: For writing and executing unit tests.
+- **Mockito**: For mocking objects and dependencies.
+
+---
+
+#### Testing Phases
+
+##### Preliminary Setup
+
+- Set up a separate testing environment mimicking the production environment.
+- Installed JUnit and Mockito for test execution and object mocking.
+
+##### Step 1: Unit Tests for Model Layer
+
+- **Status**: Completed
+- **Issues**: None
+- **Results**: All tests passed, confirming the validity of the model layer.
+
+##### Step 2: Unit Tests for Repository Layer
+
+- **Status**: Completed
+- **Issues**: None
+- **Results**: All tests passed, confirming the database CRUD operations.
+
+##### Step 3: Unit Tests for Service Layer
+
+- **Status**: In Progress
+- **Issues**: Encountered errors during the test execution.
+  
+---
+
+#### Next Steps
+
+- Investigate and resolve the errors encountered in Step 3.
+- Once resolved, continue with testing the Controller layer and overall system testing.
+
+#### Additional Notes
+
+- Due to the errors encountered in Step 3, the testing process is currently halted.
+- Plans are to revisit and rectify these issues at the next available opportunity to ensure the Service layer functions as expected.
+
+---
+
+
+
