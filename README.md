@@ -154,6 +154,43 @@ Formal documentation outline that captures the status of the testing phase for t
 - Plans are to revisit and rectify these issues at the next available opportunity to ensure the Service layer functions as expected.
 
 ---
+In our Highscore application, we have used the Repository design pattern, specifically utilizing the Spring Data JPA's repository abstraction. The `HighScoreRepository` interface extends `JpaRepository`, which provides methods for common CRUD (Create, Read, Update, Delete) operations. This design pattern aims to separate the logic that retrieves data from the database from the business logic of the application.
 
+The Repository pattern provides a clean separation of concerns and a neat abstraction over the data source, making the codebase more maintainable and testable. By doing so, it allows the application to be structured in a way that the data access logic can be reused and easily changed as needed.
+
+In Spring Data JPA, the repository abstraction comes with a variety of pre-built methods for common data access operations, and it also allows for custom query methods to be defined for more complex operations. This makes it a powerful and flexible choice for implementing data access in a Spring Boot application like yours.
+
+1. **Definition and Purpose**:
+    - The Repository design pattern acts as a middleman between the application logic and data source, providing a clean API for data access to the rest of the application.
+    - This abstraction allows changing the underlying data source or the implementation of the repository without affecting the rest of the application.
+
+2. **Abstraction Over Data Source**:
+    - The pattern hides the details of data storage and retrieval from the rest of the application, which can be beneficial in maintaining a separation of concerns.
+    - This abstraction can be particularly useful in your "HighScore" project, ensuring that the service layer interacts with a clean, well-defined API for data access, irrespective of the underlying database operations.
+
+3. **Methods Exposed**:
+    - Common methods exposed by the repository include Add, Update, Remove, and various Find methods, aligning with the CRUD (Create, Read, Update, Delete) operations central to your project.
+    - These methods reflect common operations on data storage, making the repository interface intuitive and consistent.
+
+4. **Database Interaction**:
+    - Typically, a repository is created for each table or view in the database, encapsulating the SQL or database operations necessary for data manipulation.
+    - This setup aligns well with the layered architecture of your project, with repositories residing in the repository layer, providing data access services to the service layer.
+
+5. **Custom Query Methods**:
+    - The repository might have various versions of the Find method (e.g., `FindAll`, `FindById`, etc.) to cater to different querying needs.
+    - These custom query methods can be tailored to meet the specific data retrieval requirements of your project, providing flexibility in data access.
+
+6. **Further Reading**:
+    - Delving deeper into the Repository design pattern can provide more insights on best practices and implementation nuances. The links provided in the lecture notes are great starting points, particularly the one from Microsoft which discusses Infrastructure and Persistence Layer Design in microservices, and the link to Martin Fowler's EAA Catalog on the Repository pattern.
+
+7. **Implementation in Spring Boot**:
+    - In the context of your Spring Boot project, Spring Data JPA can be used to implement the Repository pattern effortlessly. It provides sophisticated support to create repositories based on Spring and JPA, helping to reduce boilerplate code.
+    - You would define an interface for each repository, extending one of the Spring Data JPA repository interfaces like `CrudRepository` or `JpaRepository`, and Spring would provide the implementation at runtime.
+
+8. **Testing**:
+    - For testing repositories in your project, you can utilize Spring Boot Test with an embedded database like H2. This setup allows for testing the repositories in isolation, ensuring they interact with the database as expected.
+    - Mockito and JUnit can be used to mock other components and write unit tests to validate the behavior of your repositories.
+
+This pattern can be instrumental in achieving clean separation and organization of code in your Spring Boot project, especially in handling data access in a clean, testable, and maintainable manner.
 
 
