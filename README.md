@@ -112,3 +112,50 @@ Here are some additional steps you might consider:
 - [ ] Continuously update the test suite for new features and improvements.
 - [ ] Implement E2E tests for full flow validation.
 
+---
+Testing is a crucial aspect of any software project, especially when aiming for high code quality and reliability. In a Spring Boot application, there are several layers that can be tested:
+
+1. **Unit Tests**: For individual components like models, repositories, and utility classes.
+2. **Integration Tests**: For testing the interactions between components and can include database interactions.
+3. **Functional Tests**: For testing complete functionality of some application areas.
+4. **End-to-End Tests**: For testing the flow of an application from start to finish.
+
+Given that our project is focused on a RESTful API for game high scores, here are some tests that would make sense at each layer.
+
+### Suggested Roadmap for Testing
+
+
+---
+
+## Testing Strategy
+
+### Unit Tests
+
+- [ ] **Model**: Test the `HighScore` entity to ensure that it can be created and manipulated as expected.
+- [ ] **Repository**: Mock the `HighScoreRepository` and test CRUD operations.
+- [ ] **Service**: Mock the `HighScoreService` and test its methods to ensure they interact correctly with the repository.
+
+### Integration Tests
+
+- [ ] **Controller & Service**: Test the `HighScoreController` along with the `HighScoreService` to ensure they work as expected together.
+- [ ] **Database**: Write tests to check if CRUD operations are affecting the database as expected.
+
+### Functional Tests
+
+- [ ] **Endpoints**: Use tools like Postman to manually test your API endpoints.
+- [ ] **Validation**: Test if the system correctly validates incoming data (like incorrect formats, null values, etc.)
+
+### End-to-End Tests
+
+- [ ] **User Flows**: Test typical user flows like adding a new high score, updating it, and deleting it.
+
+### Additional Considerations
+
+1. **Exception Handling**: Ensure that your tests cover exceptional cases and that your API responds with the correct error codes and messages.
+2. **Logging**: Test if logging is performed where necessary.
+3. **Security**: Test for common vulnerabilities like SQL injection, Cross-Site Scripting (XSS), etc.
+
+---
+
+By adopting a comprehensive testing strategy like the one above, you'll not only catch bugs early but also make it easier to integrate new features or make changes to existing ones in the future. Given that you're working on an MSc-level project, adopting such a rigorous testing methodology can also demonstrate a deep understanding of best practices in software engineering.
+
