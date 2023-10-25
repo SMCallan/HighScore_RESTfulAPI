@@ -157,5 +157,5 @@ Given that our project is focused on a RESTful API for game high scores, here ar
 
 ---
 
-By adopting a comprehensive testing strategy like the one above, you'll not only catch bugs early but also make it easier to integrate new features or make changes to existing ones in the future. Given that you're working on an MSc-level project, adopting such a rigorous testing methodology can also demonstrate a deep understanding of best practices in software engineering.
+By adopting a comprehensive testing strategy like the one above, you'll not only catch bugs early but also make it easier to integrate new features or make changes to existing ones in the future. Given that we're working on an enterprise project, adopting such a rigorous testing methodology demonstrates best practices in software engineering.
 
