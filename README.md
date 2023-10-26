@@ -154,6 +154,8 @@ Formal documentation outline that captures the status of the testing phase for t
 - Plans are to revisit and rectify these issues at the next available opportunity to ensure the Service layer functions as expected.
 
 ---
+#### **Repository Design Pattern: Reflection**
+
 In our Highscore application, we have used the Repository design pattern, specifically utilizing the Spring Data JPA's repository abstraction. The `HighScoreRepository` interface extends `JpaRepository`, which provides methods for common CRUD (Create, Read, Update, Delete) operations. This design pattern aims to separate the logic that retrieves data from the database from the business logic of the application.
 
 The Repository pattern provides a clean separation of concerns and a neat abstraction over the data source, making the codebase more maintainable and testable. By doing so, it allows the application to be structured in a way that the data access logic can be reused and easily changed as needed.
