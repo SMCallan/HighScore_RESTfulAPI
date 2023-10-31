@@ -1,7 +1,7 @@
-package service;
+package com.csm.highscore.gamehighscore.service;
 
-import model.HighScore;
-import repository.HighScoreRepository;
+import com.csm.highscore.gamehighscore.model.HighScore;
+import com.csm.highscore.gamehighscore.repository.HighScoreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,5 +33,10 @@ public class HighScoreServiceImpl implements HighScoreService {
     @Override
     public void deleteHighScore(Long id) {
         highScoreRepository.deleteById(id);
+    }
+
+    @Override
+    public HighScore save(HighScore highScore) {
+        return null;
     }
 }

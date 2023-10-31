@@ -1,12 +1,12 @@
-package controller;
+package com.csm.highscore.gamehighscore.controller;
 
-import model.HighScore;
+import com.csm.highscore.gamehighscore.model.HighScore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import repository.HighScoreRepository;
-import service.HighScoreService;
+import com.csm.highscore.gamehighscore.repository.HighScoreRepository;
+import com.csm.highscore.gamehighscore.service.HighScoreService;
 
 import java.util.List;
 
